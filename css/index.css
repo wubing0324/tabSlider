@@ -1,0 +1,217 @@
+@charset "gb2312";
+/*********** reset 样式重置代码***********/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code {
+  font-size: 100%;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+sup,
+sub {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+:link,
+:visited,
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+a:hover {
+  text-decoration: underline;
+}
+/*********** layout base ***********/
+body {
+  font-family: "Microsoft YaHei", "simSun", "Lucida Grande", "Lucida Sans Unicode", Arial;
+  font-size: 12px;
+  min-width: 1260px;
+}
+
+
+
+/*正式代码*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+  content: '\0020';
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+.hide {
+  display: none;
+}
+
+
+
+.pic-list {
+  border: 1px solid black;
+  width: 640px;
+  height: 327px;
+  padding-top: 12px;
+  margin: 200px auto 0;
+}
+.pic-list li {
+  float: left;
+  margin: 0 0 10px 10px;
+  width: 200px;
+}
+.pic-list a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.pic-list a:hover .da-animate {
+  left: 0;
+  top: 0;
+}
+.da-animate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+  top: 0;
+  left: -100%;
+  background: url(../img/_img_mask.png) no-repeat;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.da-animate .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* Initial state classes: */
+.da-slideFromTop {
+  left: 0px;
+  top: -100%;
+}
+.da-slideFromBottom {
+  left: 0px;
+  top: 100%;
+}
+.da-slideFromLeft {
+  top: 0px;
+  left: -100%;
+}
+.da-slideFromRight {
+  top: 0px;
+  left: 100%;
+}
+/* Final state classes: */
+.da-slideTop {
+  top: 0px;
+}
+.da-slideLeft {
+  left: 0px;
+}
+p {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin-left: 10px;
+  position: absolute;
+  top: 400px;
+  left: 400px;
+  display: none;
+}
